@@ -4,6 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "user_management";
 $cookies= "local";
+$_FILES="HEADACH"
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
