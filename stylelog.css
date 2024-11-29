@@ -1,0 +1,126 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/b.jpg);
+    background-size: cover;
+}
+
+/* Header and Background */
+.header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/b.jpg);
+    background-size: cover;
+    background-position: center top;
+    z-index: -1;
+    transform: translateY(50px);
+}
+
+/* Login Page Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-form {
+    background:linear-gradient(to right, #6a11cb, #ff3b86,0.5);
+    backdrop-filter: blur(50px);
+    padding: 30px ;
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 15px;
+    color: #c50707;
+    font-weight: bold;
+    
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 17px;
+    margin-bottom: 2%;
+    font-weight: bold;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #d47676 ;
+    border-radius: 5px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 40px;
+    background: rgba(197, 61, 125, 0.986);
+    border: 1px solid rgba(197, 61, 125, 0.986);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: medium;
+    color: rgba(59, 212, 123, 0.986);
+    font-weight: bold;
+    transition: .5s
+}
+
+.login-btn:hover {
+    background-color: #d9abe2;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    text-decoration: none;
+    color: #8f1f1f;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Link to the Home Page */
+.login-container a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
