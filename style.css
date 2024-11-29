@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/b.jpg);
+    background-size: cover;
+    background-position: center top;
+    transform: translateY(50px); 
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5% 5%;
+    background-image: url(image/Header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70px;
+    width: 100%;
+}
+
+nav h1 {
+    display: flex;
+    align-items: center; 
+    color: transparent;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-right: auto; 
+}
+
+nav h1 img {
+    height: 35px; 
+    width: auto;
+    position: relative;
+}
+
+    
+
+
+nav img {
+    height: 80px; 
+    width: auto; 
+    left:2%;
+
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+.nav-menu ul li::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: deeppink;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-menu ul li:hover::after {
+    width: 100%;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login,
+.reg {
+    padding: 5px 10px;
+    background: rgb(231, 229, 231);
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.login:hover,
+.reg:hover {
+    background: #df4775;
+    color: #162938;
+}
+
+.ex{
+    margin-left: 77%;
+    margin-top: 35%;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid rgba(60, 214, 201, 0.986);
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: medium;
+    color: rgba(60, 214, 201, 0.986);
+    font-weight: 25;
+    transition: .5s;
+}
+.ex:hover{
+    background: #d83a69;
+    color: #162938;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+}
+
